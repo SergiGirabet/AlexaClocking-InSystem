@@ -2,5 +2,5 @@
 .env
 
 # Ignorar carpetas específicas
-clocking-system-soap/env/
+#clocking-system-soap/env/
 *.pyc
