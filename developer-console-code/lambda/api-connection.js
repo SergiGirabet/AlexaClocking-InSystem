@@ -8,7 +8,7 @@ module.exports = {
                 <soapenv:Header/>
                 <soapenv:Body>
                     <djan:clockIn>
-                        <djan:token>3295f304c83ea46652c786babfbfe3950384c063</djan:token>
+                        <djan:token>Put your token here</djan:token>
                         <djan:name>${profileName}</djan:name>
                     </djan:clockIn>
                 </soapenv:Body>
@@ -48,7 +48,7 @@ module.exports = {
                 <soapenv:Header/>
                 <soapenv:Body>
                     <djan:clockOut>
-                        <djan:token>3295f304c83ea46652c786babfbfe3950384c063</djan:token>
+                        <djan:token>Put your token here</djan:token>
                         <djan:name>${profileName}</djan:name>
                     </djan:clockOut>
                 </soapenv:Body>
