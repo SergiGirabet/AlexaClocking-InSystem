@@ -1,0 +1,74 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PauseIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ResumeIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "EnterWorkIntent",
+          "samples": [
+            "para entrar ahora",
+            "para fichar",
+            "para entrar",
+            "entrar",
+            "fichar",
+            "para entrar al trabajo",
+            "para entrar a trabajar"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "LeaveWorkIntent",
+          "samples": [
+            "irme",
+            "marcharme",
+            "para salir de trabajar",
+            "para salir del trabajo",
+            "para salir ahora",
+            "para salir",
+            "para desfichar",
+            "desfichar"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "UnhandledIntent",
+          "samples": [
+            "reventar",
+            "discusion",
+            "moniato",
+            "recorte",
+            "nada",
+            "patata",
+            "hola"
+          ]
+        }
+      ],
+      "types": [],
+      "invocationName": "fichaje semic"
+    }
+  }
+}

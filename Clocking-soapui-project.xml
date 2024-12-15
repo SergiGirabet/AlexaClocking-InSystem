@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="3e855361-a324-45e3-97af-84559ccdbd1a" activeEnvironment="Default" name="Clocking" resourceRoot="" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="268e77b0-ab63-490f-9168-582791d87aef" wsaVersion="NONE" name="Application" type="wsdl" bindingName="{django.soap.clocking}Application" soapVersion="1_1" anonymous="optional" definition="http://localhost:8000/api/clocking/soap_service/?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8000/api/clocking/soap_service/?wsdl"><con:part><con:url>http://localhost:8000/api/clocking/soap_service/?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="django.soap.clocking" name="Application" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:plink="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:wsdlsoap11="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdlsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap11enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap11env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap12env="http://www.w3.org/2003/05/soap-envelope" xmlns:soap12enc="http://www.w3.org/2003/05/soap-encoding" xmlns:wsa="http://schemas.xmlsoap.org/ws/2003/03/addressing" xmlns:xop="http://www.w3.org/2004/08/xop/include" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="django.soap.clocking">
+  <wsdl:types>
+    <xs:schema targetNamespace="django.soap.clocking" elementFormDefault="qualified">
+      <xs:complexType name="clockInResponse"/>
+      <xs:complexType name="clockOutResponse"/>
+      <xs:complexType name="clockIn">
+        <xs:sequence>
+          <xs:element name="token" type="xs:string"/>
+          <xs:element name="name" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="clockOut">
+        <xs:sequence>
+          <xs:element name="token" type="xs:string"/>
+          <xs:element name="name" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="clockInResponse" type="tns:clockInResponse"/>
+      <xs:element name="clockOutResponse" type="tns:clockOutResponse"/>
+      <xs:element name="clockIn" type="tns:clockIn"/>
+      <xs:element name="clockOut" type="tns:clockOut"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="clockIn">
+    <wsdl:part name="clockIn" element="tns:clockIn"/>
+  </wsdl:message>
+  <wsdl:message name="clockInResponse">
+    <wsdl:part name="clockInResponse" element="tns:clockInResponse"/>
+  </wsdl:message>
+  <wsdl:message name="clockOut">
+    <wsdl:part name="clockOut" element="tns:clockOut"/>
+  </wsdl:message>
+  <wsdl:message name="clockOutResponse">
+    <wsdl:part name="clockOutResponse" element="tns:clockOutResponse"/>
+  </wsdl:message>
+  <wsdl:service name="ManageClockingActionsView">
+    <wsdl:port name="Application" binding="tns:Application">
+      <wsdlsoap11:address location="http://localhost:8000/api/clocking/soap_service/"/>
+    </wsdl:port>
+  </wsdl:service>
+  <wsdl:portType name="Application">
+    <wsdl:operation name="clockIn" parameterOrder="clockIn">
+      <wsdl:input name="clockIn" message="tns:clockIn"/>
+      <wsdl:output name="clockInResponse" message="tns:clockInResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="clockOut" parameterOrder="clockOut">
+      <wsdl:input name="clockOut" message="tns:clockOut"/>
+      <wsdl:output name="clockOutResponse" message="tns:clockOutResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Application" type="tns:Application">
+    <wsdlsoap11:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="clockIn">
+      <wsdlsoap11:operation soapAction="clockIn" style="document"/>
+      <wsdl:input name="clockIn">
+        <wsdlsoap11:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="clockInResponse">
+        <wsdlsoap11:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clockOut">
+      <wsdlsoap11:operation soapAction="clockOut" style="document"/>
+      <wsdl:input name="clockOut">
+        <wsdlsoap11:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="clockOutResponse">
+        <wsdlsoap11:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8000/api/clocking/soap_service/</con:endpoint></con:endpoints><con:operation id="a053d3cd-9828-4c3d-8307-892f924f8634" isOneWay="false" action="clockIn" name="clockIn" bindingOperationName="clockIn" type="Request-Response" outputName="clockInResponse" inputName="clockIn" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="233c8719-c981-4d4c-ba9d-10f6c506af47" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8000/api/clocking/soap_service/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:djan="django.soap.clocking">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <djan:clockIn>\r
+         <djan:token>be9538a0fe9b5b64f76e89b70460a93989c902f7</djan:token>\r
+         <djan:name>prova10</djan:name>\r
+      </djan:clockIn>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="clockIn"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="49d6dd83-8a37-41c4-b3fb-cf904ee54085" isOneWay="false" action="clockOut" name="clockOut" bindingOperationName="clockOut" type="Request-Response" outputName="clockOutResponse" inputName="clockOut" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a912dd71-2e84-49d2-a276-cf13bd0d50e7" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8000/api/clocking/soap_service/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:djan="django.soap.clocking">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <djan:clockOut>\r
+         <djan:token>be9538a0fe9b5b64f76e89b70460a93989c902f7</djan:token>\r
+         <djan:name>prova9</djan:name>\r
+      </djan:clockOut>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="clockOut"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
