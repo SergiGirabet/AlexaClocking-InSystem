@@ -11,7 +11,7 @@ The purpose of this project is to develop an Alexa skill that:
 1. Voice Recognition
 - Employees can clock-in or clock-out using their voice.
 - The Alexa skill distinguishes between different employees based on their voice input.
-- 
+  
 2. API Integration
 - The system connects to SEMIC Group's clocking-in API for real-time data synchronization.
   
